@@ -1,0 +1,90 @@
+HTML- Hyper Text Markup Language
+CSS- Cascading Style Sheets
+PHP- Hypertext Preprocessor (Personal Home Page)
+
+Linux: Linux is a free open source operating system that was created in 1991 by Linus Torvalds.
+
+operating system is to provide environment in which users can execute programs in efficient manner.
+
+common features:
+-portable: software can work on different type of hardware.
+-open source: freely available
+-multi user: multiple users can acess
+-multiprogramming: multiple application can run
+-security
+
+nohup: if a user want a process that he has ececuted not to die even when he logged out from the system.
+kill: it is used to terminate a process.
+ps: it is used to show which process is running
+who: used to display users who are logged on the system currently
+who am i: tells who you are.
+
+sort file1
+sort the file
+
+sort -r file1
+sort in reverse order
+
+sort -o sortfile file1
+not display anything, but stores the output in sortfile
+
+sort -n number.txt
+sort with numeric data
+
+touch: used to create empty file
+
+wc -option filename
+option: -l  -w  -c(byte)  -m(character)
+display num of line, word, character
+
+mathematical commands:
+expr expression (cant handle floating num)
+eg expr 10+5
+
+bc (can handle floating num)
+bc 
+enter
+10+5.5
+enter
+15.5
+ctrl+d endup
+
+factor: prme factor of mun
+factor num
+factor 
+enter
+30
+30: 2 3 5
+ctrl d
+
+vi
+esc 
+dd: delete current line
+db: delete previous word
+dw: delete from current cursor to end of word
+yy: copy current line
+<n>yy: copy n lines from starting 
+p: paste after the current cursor
+P: paste before the current cursor
+
+Types of shell
+-bourne shell
+-C shell
+-korn shell
+-A shell
+-Z shell
+
+shell variable
+a named storage location that holds data or values
+building shell variable
+created and manipulated by Linux. they are in capital letters
+PWD: current working dir
+USERNAME
+HOME
+userdefined shell variable
+created and manipulated by user. they are in lower letters
+echo $variablename
+read variablename
+
+uname: used to print info abaout current system
+hostname: display or set computer hostname
