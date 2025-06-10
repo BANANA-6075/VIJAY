@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="" method="post">
+    <input type="text" placeholder="Name" name="name">
+    <br><br>
+    <input type="number" placeholder="Id" name="id">
+    <br><br>
+    <input type="number" placeholder="Age" name="age">
+    <br><br>
+    <input type="submit" value="Submit" name="submit">
+   </form>
+   <?php
+   if(isset($_POST['submit']))
+   {
+    $name = $_POST['name'];
+    $id = $_POST['id'];
+    $age = $_POST['age'];
+    $host="localhost";
+    $user="root";
+    $password="";
+    $db="learn";
+    $conn=mysqli_connect($host,$user,$password,$db);
+    if($conn){
+        $query = "INSERT INTO learntable(name ,id,age) VALUES ('$name',$id,$age)";
+        $result = mysqli_query($conn,$query);
+        if($result){
+        $data = mysqli_query($conn,"SELECT *from learntable");
+        echo "<table border='1' gap='10' cellpadding='10'>";
+        echo "<tr><th>Name</th><th>ID</th><th>Age</th></tr>";
+        while($row= mysqli_fetch_array($data)){
+            echo "<tr>";
+            echo "<td>".htmlspecialchars($row['name'])."</td>";
+            echo "<td>".$row['id']."</td>";
+            echo "<td>".$row['age']."</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        
+    }
+   }}
+   ?>
+</body>
+</html>
